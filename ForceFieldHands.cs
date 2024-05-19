@@ -16,8 +16,10 @@ public class ForceFieldHands : MonoBehaviour
     {
         transform.position = handPosition.position;
 
+        // calculate hand movement speed
         float handSpeed = (handPosition.position - previousHandPosition).magnitude/Time.deltaTime;
 
+        // increase attraction to hands with speed of hand movement
         forceField.gravity = handSpeed * fieldStrengthMultiplier;
 
         previousHandPosition = handPosition.position;
