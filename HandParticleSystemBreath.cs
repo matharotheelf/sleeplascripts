@@ -10,6 +10,7 @@ public class HandParticleSystemBreath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // move particle system to the centre of hands
         transform.position = handTransform.position;
     }
 }
